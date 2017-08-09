@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 20170808140111) do
 
   create_table "gossips", force: :cascade do |t|
     t.string "content"
+    t.integer "corsair_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["corsair_id"], name: "index_gossips_on_corsair_id"
   end
 
 end
